@@ -1,0 +1,147 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Universal Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.5s ease-in-out;
+    background-color: #f0f8ff; /* Default light blue background */
+}
+
+/* Weather Container Styling */
+#weather-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background: linear-gradient(135deg, #ffffff, #f0f8ff);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+    animation: fadeIn 0.8s ease;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Weather Information Styling */
+#location, #temperature, #weather-description, #details {
+    margin: 10px 0;
+}
+
+#temperature {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+}
+
+#weather-description {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: #555;
+}
+
+#weather-icon img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Additional Weather Details */
+#details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+#details p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    background-color: #00A4FF;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #008ed6;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Forecast Styling */
+#forecast {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#forecast-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#forecast-container div {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+#forecast-container img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #weather-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    #temperature {
+        font-size: 1.5rem;
+    }
+
+    #forecast-container {
+        flex-direction: column;
+    }
+}
